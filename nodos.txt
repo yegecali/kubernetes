@@ -1,0 +1,17 @@
+listar pods
+kubectl -n [namespace] get pods | grep [filter-pod]
+
+describir una instancia de pods
+kubectl -n [namespace] describe pod [filter-pod-instancia-xxxx]
+
+reinicio de una instancia de pods
+kubectl -n [namespace] delete pod [filter-pod-instancia-xxxx]
+
+reinicio de todos los pods
+kubectl -n [namespace] delete -all pods
+
+log de una instancia de pods
+kubectl -n [namespace] logs [filter-pod-instancia-xxxx]
+
+ingresar al pod con exec
+kubectl -n [namespace] exec -it [filter-pod-instancia-xxxx] -- bash
