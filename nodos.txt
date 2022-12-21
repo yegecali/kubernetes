@@ -1,3 +1,18 @@
+mostrar la version de kubectl
+kubectl version
+
+ver la configuracion del cluster
+kubectl config view
+
+mostrar todos los depliegues
+kubectl -n [namespace] get deployment
+
+buscar el despliegue
+kubectl -n [namespace] get deployment | grep [deployment-buscar]
+
+describir despliegue
+kubectl -n [namespace] describe deployment [deployment-buscar]
+
 listar pods
 kubectl -n [namespace] get pods | grep [filter-pod]
 
@@ -12,6 +27,12 @@ kubectl -n [namespace] delete -all pods
 
 log de una instancia de pods
 kubectl -n [namespace] logs [filter-pod-instancia-xxxx]
+
+log de una instancia de pods desde un tiempo en horas
+kubectl -n [namespace] logs --since=1h [filter-pod-instancia-xxxx]
+
+log de una instancia de pods mostrar n lineas
+kubectl -n [namespace] logs --tail=20 [filter-pod-instancia-xxxx]
 
 ingresar al pod con exec
 kubectl -n [namespace] exec -it [filter-pod-instancia-xxxx] -- bash
