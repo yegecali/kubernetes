@@ -22,6 +22,9 @@ kubectl -n [namespace] describe pod [filter-pod-instancia-xxxx]
 reinicio de una instancia de pods
 kubectl -n [namespace] delete pod [filter-pod-instancia-xxxx]
 
+reinicio de una aplicacion
+kubectl -n [namespace] delete pods -l app=[nombre_app]
+
 reinicio de todos los pods
 kubectl -n [namespace] delete -all pods
 
